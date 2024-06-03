@@ -60,11 +60,16 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     let availableParts = [...parts];
+    let usedParts = []; // Track used parts
     let currentPart = null;
     let currentBlock = 0;
     let introStep = 0;  // Track the introduction step
+    let historyStack = [];  // Stack to keep track of history
 
-    function handleDocumentClick() {
+    function handleDocumentClick(event) {
+        // Ignore click on back button
+        if (event.target.id === 'back-button') return;
+
         if (introStep < introTexts.length) {
             showIntro();
         } else {
@@ -84,8 +89,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showNextBlock() {
+        historyStack.push({ currentPart, currentBlock, availableParts: [...availableParts] });
+        document.getElementById('back-button').style.display = 'block';
+
         currentBlock++;
         if (!currentPart || currentBlock >= Object.keys(currentPart).length) {
+            if (currentPart) {
+                // Only move to usedParts after fully displaying the part
+                usedParts.push(currentPart);
+                availableParts = availableParts.filter(part => part !== currentPart);
+            }
             showRandomPart();
         } else {
             displayBlock();
@@ -99,8 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const randomIndex = Math.floor(Math.random() * availableParts.length);
-        currentPart = availableParts.splice(randomIndex, 1)[0]; // Remove the selected part and set it as currentPart
+        currentPart = availableParts[randomIndex];
         currentBlock = 0;
+
         displayBlock();
     }
 
@@ -123,4 +137,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
+    // Handle back button click
+    document.getElementById('back-button').addEventListener('click', () => {
+        if (historyStack.length > 0) {
+            const lastState = historyStack.pop();
+            currentPart = lastState.currentPart;
+            currentBlock = lastState.currentBlock;
+            availableParts = lastState.availableParts;
+            displayBlock();
+
+            // Hide back button if no more history
+            if (historyStack.length === 0) {
+                document.getElementById('back-button').style.display = 'none';
+            }
+        }
+    });
 });
