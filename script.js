@@ -10,21 +10,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const parts = [
         {
-            first: `First block of Part 1.
-This is a multiline text block.`,
-            second: `непредсказуемость / музыкальные игры / хакинг / камни / шары / звуковые карты / 
-            спортивные игры / синтезаторы / случайность / инструкции / игрушки / монетка / память / 
-            изысканный труп / партитуры / circuit bending / колода карт / слова / сломанный телефон / 
-            правила / музыкальный автомат / звуковые игры / квесты / выбор / интерактивность / 
-            шахматы / игральные кости / лего / тв-игра / звуковая поэзия / куклы / звуковые прогулки`,
-            third: `Third block of Part 1.
-This is another multiline text block.`
+            first: `Часть 2 Пинг-понг или теннис`,
+            second: `непредсказуемость / музыкальные игры / хакинг / камни / <span class='bold'>шары</span> / звуковые карты / 
+            <span class='bold'>спортивные игры</span> / синтезаторы / случайность / инструкции / игрушки / монетка / память / 
+            изысканный труп / <span class='bold'>партитуры</span> / circuit bending / колода карт / слова / сломанный телефон / 
+            правила / музыкальный автомат / звуковые игры / квесты / выбор / <span class='bold'>интерактивность</span> / 
+            шахматы / игральные кости / лего / тв-игра / звуковая поэзия / куклы / звуковые прогулки`
         },
         {
-            first: `First block of Part 2.
-This is a multiline text block.`,
-            second: `Second block of Part 2 with <span class='bold'>crucial</span> words.`
-            // Note: No third block
+            first: `Часть 3 Шахматы как бы назвать? Проверить шахматы это спорт?`,
+            second: `непредсказуемость / музыкальные игры / хакинг / <span class='bold'>камни</span> / шары / звуковые карты / 
+            <span class='bold'>спортивные игры</span> / <span class='bold'>синтезаторы</span> / случайность / инструкции / игрушки / монетка / память / 
+            изысканный труп / партитуры / circuit bending / колода карт / слова / сломанный телефон / 
+            правила / музыкальный автомат / звуковые игры / квесты / выбор / <span class='bold'>интерактивность</span> / 
+            <span class='bold'>шахматы</span> / игральные кости / лего / тв-игра / звуковая поэзия / куклы / звуковые прогулки`
+        },
+        {
+            first: `Часть 4 Взрослые тоже хотят играть или что-то про игрушки`,
+            second: `непредсказуемость / музыкальные игры / хакинг / камни / шары / звуковые карты / 
+            спортивные игры / синтезаторы / случайность / инструкции / <span class='bold'>игрушки</span> / монетка / память / 
+            изысканный труп / <span class='bold'>партитуры</span> / circuit bending / колода карт / слова / сломанный телефон / 
+            правила / музыкальный автомат / звуковые игры / квесты / выбор / интерактивность / 
+            шахматы / игральные кости / лего / тв-игра / звуковая поэзия / <span class='bold'>куклы</span> / звуковые прогулки`,
+        },
+        {
+            firts: `Часть 5 Играючи взламывать капиталистическую систему`,
+            second: `непредсказуемость / музыкальные игры / <span class='bold'>хакинг</span> / камни / шары / звуковые карты / 
+            спортивные игры / <span class='bold'>синтезаторы</span> / случайность / инструкции / <span class='bold'>игрушки</span> / монетка / <span class='bold'>память</span> / 
+            изысканный труп / партитуры / <span class='bold'>circuit bending</span> / колода карт / слова / сломанный телефон / 
+            правила / музыкальный автомат / звуковые игры / квесты / выбор / интерактивность / 
+            шахматы / игральные кости / <span class='bold'>лего</span> / тв-игра / звуковая поэзия / <span class='bold'>куклы</span> / звуковые прогулки`
+        },
+        {
+            first: `Часть 6 Твой ход`,
+            second: `<span class='bold'>непредсказуемость</span> / музыкальные игры / хакинг / камни / шары / звуковые карты / 
+            спортивные игры / синтезаторы / случайность / <span class='bold'>инструкции</span> / игрушки / монетка / память / 
+            изысканный труп / <span class='bold'>партитуры</span> / circuit bending / колода карт / слова / <span class='bold'>сломанный телефон</span> / 
+            правила / <span class='bold'>музыкальный автомат</span> / звуковые игры / квесты / <span class='bold'>выбор</span> / <span class='bold'>интерактивность</span> / 
+            шахматы / игральные кости / лего / <span class='bold'>тв-игра</span> / звуковая поэзия / куклы / звуковые прогулки`,
+            third: `Pauline Oliveros: <br>
+            FOR ANNEA LOCKWOOD AND ALISON KNOWLES<br>
+            Keep the next sound you hear in mind<br>
+            for at least the next halfhour.<br>
+            February 20, 1975
+            `,
+            fourth: `по русски`
         },
         // Add more parts as needed
     ];
@@ -76,8 +106,21 @@ This is a multiline text block.`,
 
     function displayBlock() {
         if (currentPart) {
-            const blockText = currentPart[Object.keys(currentPart)[currentBlock]];
-            document.getElementById('text-block').innerHTML = blockText;
+            const blockKeys = Object.keys(currentPart);
+            const blockText = currentPart[blockKeys[currentBlock]];
+
+            if (blockKeys[currentBlock] === "third" && blockKeys[currentBlock + 1] === "fourth") {
+                // If third block has both left and right parts
+                document.getElementById('text-block').style.display = 'none';
+                document.getElementById('text-block-container').style.display = 'flex';
+                document.getElementById('left-block').innerHTML = blockText;
+                document.getElementById('right-block').innerHTML = currentPart[blockKeys[currentBlock + 1]];
+                currentBlock++; // Skip the next block since it's already handled
+            } else {
+                document.getElementById('text-block').style.display = 'block';
+                document.getElementById('text-block-container').style.display = 'none';
+                document.getElementById('text-block').innerHTML = blockText;
+            }
         }
     }
 });

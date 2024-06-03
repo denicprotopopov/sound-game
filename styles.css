@@ -7,3 +7,14 @@
 .bold {
     font-weight: bold;
 }
+
+#text-block-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#left-block, #right-block {
+    width: 45%;
+    text-align: left;
+}
