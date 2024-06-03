@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('intro-text').innerText = introTexts[0];
 
     document.addEventListener('click', handleDocumentClick);
+    document.addEventListener('keydown', handleKeyDown);
 
     const parts = [
         {
@@ -67,13 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let historyStack = [];  // Stack to keep track of history
 
     function handleDocumentClick(event) {
-        // Ignore click on back button
-        if (event.target.id === 'back-button') return;
-
         if (introStep < introTexts.length) {
             showIntro();
         } else {
             showNextBlock();
+        }
+    }
+
+    function handleKeyDown(event) {
+        if (event.key === 'ArrowLeft') {
+            goBack();
         }
     }
 
@@ -90,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showNextBlock() {
         historyStack.push({ currentPart, currentBlock, availableParts: [...availableParts] });
-        document.getElementById('back-button').style.display = 'block';
 
         currentBlock++;
         if (!currentPart || currentBlock >= Object.keys(currentPart).length) {
@@ -138,19 +141,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Handle back button click
-    document.getElementById('back-button').addEventListener('click', () => {
+    function goBack() {
         if (historyStack.length > 0) {
             const lastState = historyStack.pop();
             currentPart = lastState.currentPart;
             currentBlock = lastState.currentBlock;
             availableParts = lastState.availableParts;
             displayBlock();
-
-            // Hide back button if no more history
-            if (historyStack.length === 0) {
-                document.getElementById('back-button').style.display = 'none';
-            }
         }
-    });
+    }
 });
