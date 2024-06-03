@@ -1,0 +1,9 @@
+#intro, #content {
+    text-align: center;
+    margin: 50px;
+    font-size: 1.5em;
+}
+
+.bold {
+    font-weight: bold;
+}
