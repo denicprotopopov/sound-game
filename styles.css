@@ -1,11 +1,25 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif; /* Optional: Set a default font */
+}
+
 #intro, #content {
     text-align: center;
     margin: 50px;
     font-size: 1.5em;
+    line-height: 1.6; /* Increase line height for better readability */
 }
 
 .bold {
     font-weight: bold;
+}
+
+.circle {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 2px 5px;
+    box-shadow: 0 0 20px rgba(215, 215, 215, 0.8); /* Brighter and thicker blue glow */
 }
 
 #text-block-container {
@@ -17,4 +31,9 @@
 #left-block, #right-block {
     width: 45%;
     text-align: left;
+    line-height: 1.6; /* Increase line height for left and right blocks */
+}
+
+p {
+    color: white; /* Ensure all paragraphs have white text */
 }
