@@ -18,28 +18,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const lastPart = {
         first: `<span id ='intro'>Часть 11 / Final</span>`,
-        second: `<div class="circle">Hildegard Westerkamp <br>
+        second: `<div class="circle"><span class='bold'>Hildegard Westerkamp. Soundwalking</span><br><br>
+        <br>
         Try to move <br>
         Without making any sound. <br>
         Is it possible?<br>
+        <br>
         Do you hear any<br>
         Intermittent or discrete sounds<br>
         Rustles<br>
         Bangs<br>
-        Swishes<br>
         Thuds<br>
-        What are the sources of the different sounds?<br>
+        <br>
         What else do you hear?<br>
+        <br>
         Lead your ears away from these sounds and listen<br>
         beyond-----into the distance.<br>
         What is the quietest sound?<br>
         What else do you hear?<br>
+        <br>
         What else?<br>
         What else?<br>
         What else?<br>
-        What else? </div>
+        What else?<br>
+
+        </div>
         `,
-        third: `<div class="circle">по русски</div>`
+        third: `<div class="circle"><span class='bold'>Хильдегард Вестеркамп. Звуковая прогулка</span><br><br>
+        <br>
+        Попробуйте пошевелиться<br>
+        Не издавая ни звука.<br>
+        Возможно ли это?<br>
+        <br>
+        Слышите ли вы какие-либо<br>
+        Прерывистые или отдельные звуки<br>
+        Шорохи<br>
+        Взрывы<br>
+        Глухие удары<br>
+        <br>
+        Что еще вы слышите?<br>
+        <br>
+        Отвлекитесь от этих звуков и послушайте<br>
+        то, что за пределами ----- на дистанции<br>
+        Какой звук самый тихий?<br>
+        Что еще вы слышите?<br>
+        <br>
+        Что еще? <br>
+        Что еще? <br>
+        Что еще? <br>
+        Что еще? <br>
+
+        </div>`
     };
 
     document.addEventListener('click', handleDocumentClick);
@@ -47,114 +76,116 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const parts = [
         {
-            first: `Часть 2 / Пинг-понг или теннис`,
-            second: `непредсказуемость / музыкальные игры / хакинг / камни / <span class='circle'>шары</span> / звуковые карты / 
-            <span class='circle'>спортивные игры</span> / синтезаторы / случайность / инструкции / игрушки / монетка / память / 
-            изысканный труп / <span class='circle'>партитуры</span> / circuit bending / колода карт / слова / сломанный телефон / 
-            правила / музыкальный автомат / звуковые игры / квесты / выбор / <span class='circle'>интерактивность</span> / 
+            first: `<span id ='intro'>Часть 2 / Пинг-понг или теннис</span>`,
+            second: `непредсказуемость / музыкальные игры / хакинг / камни / <span class='circle'>шары</span> / звуковые карты /<br> 
+            <span class='circle'>спортивные игры</span> / синтезаторы / случайность / инструкции / игрушки / монетка / память / <br>
+            изысканный труп / <span class='circle'>партитуры</span> / circuit bending / колода карт / слова / сломанный телефон / <br>
+            правила / музыкальный автомат / звуковые игры / квесты / выбор / <span class='circle'>интерактивность</span> / <br>
             шахматы / игральные кости / лего / тв-игра / звуковая поэзия / куклы / звуковые прогулки`
         },
         {
-            first: `Часть 3 / Шахматные партии`,
-            second: `непредсказуемость / музыкальные игры / хакинг / <span class='circle'>камни</span> / шары / звуковые карты / 
-            <span class='circle'>спортивные игры</span> / <span class='circle'>синтезаторы</span> / случайность / инструкции / игрушки / монетка / память / 
-            изысканный труп / партитуры / circuit bending / колода карт / слова / сломанный телефон / 
-            правила / музыкальный автомат / звуковые игры / квесты / выбор / <span class='circle'>интерактивность</span> / 
+            first: `<span id ='intro'>Часть 3 / Шахматные партии</span>`,
+            second: `непредсказуемость / музыкальные игры / хакинг / <span class='circle'>камни</span> / шары / звуковые карты / <br>
+            <span class='circle'>спортивные игры</span> / <span class='circle'>синтезаторы</span> / случайность / инструкции / игрушки / монетка / память / <br>
+            изысканный труп / партитуры / circuit bending / колода карт / слова / сломанный телефон / <br>
+            правила / музыкальный автомат / звуковые игры / квесты / выбор / <span class='circle'>интерактивность</span> / <br>
             <span class='circle'>шахматы</span> / игральные кости / лего / тв-игра / звуковая поэзия / куклы / звуковые прогулки`
         },
         {
-            first: `Часть 4 / Оркестр игрушек`,
-            second: `непредсказуемость / музыкальные игры / хакинг / камни / шары / звуковые карты / 
-            спортивные игры / синтезаторы / случайность / инструкции / <span class='circle'>игрушки</span> / монетка / память / 
-            изысканный труп / <span class='circle'>партитуры</span> / circuit bending / колода карт / слова / сломанный телефон / 
-            правила / музыкальный автомат / звуковые игры / квесты / выбор / интерактивность / 
+            first: `<span id ='intro'>Часть 4 / Оркестр игрушек</span>`,
+            second: `непредсказуемость / музыкальные игры / хакинг / камни / шары / звуковые карты / <br>
+            спортивные игры / синтезаторы / случайность / инструкции / <span class='circle'>игрушки</span> / монетка / память / <br>
+            изысканный труп / <span class='circle'>партитуры</span> / circuit bending / колода карт / слова / сломанный телефон / <br>
+            правила / музыкальный автомат / звуковые игры / квесты / выбор / интерактивность / <br>
             шахматы / игральные кости / лего / тв-игра / звуковая поэзия / <span class='circle'>куклы</span> / звуковые прогулки`,
         },
         {
-            firts: `Часть 5 / Играючи взламывать капиталистическую систему`,
-            second: `непредсказуемость / музыкальные игры / <span class='circle'>хакинг</span> / камни / шары / звуковые карты / 
-            спортивные игры / <span class='circle'>синтезаторы</span> / случайность / инструкции / <span class='circle'>игрушки</span> / монетка / <span class='circle'>память</span> / 
-            изысканный труп / партитуры / <span class='circle'>circuit bending</span> / колода карт / слова / сломанный телефон / 
-            правила / музыкальный автомат / звуковые игры / квесты / выбор / интерактивность / 
+            firts: `<span id ='intro'>Часть 5 / Играючи взламывать капиталистическую систему</span>`,
+            second: `непредсказуемость / музыкальные игры / <span class='circle'>хакинг</span> / камни / шары / звуковые карты / <br>
+            спортивные игры / <span class='circle'>синтезаторы</span> / случайность / инструкции / <span class='circle'>игрушки</span> / монетка / <span class='circle'>память</span> / <br>
+            изысканный труп / партитуры / <span class='circle'>circuit bending</span> / колода карт / слова / сломанный телефон / <br>
+            правила / музыкальный автомат / звуковые игры / квесты / выбор / интерактивность / <br>
             шахматы / игральные кости / <span class='circle'>лего</span> / тв-игра / звуковая поэзия / <span class='circle'>куклы</span> / звуковые прогулки`
         },
         {
-            first: `Часть 6 / Твой ход`,
-            second: `<span class='circle'>непредсказуемость</span> / музыкальные игры / хакинг / камни / шары / звуковые карты / 
-            спортивные игры / синтезаторы / случайность / <span class='circle'>инструкции</span> / игрушки / монетка / память / 
-            изысканный труп / <span class='circle'>партитуры</span> / circuit bending / колода карт / слова / <span class='circle'>сломанный телефон</span> / 
-            правила / <span class='circle'>музыкальный автомат</span> / звуковые игры / квесты / <span class='circle'>выбор</span> / <span class='circle'>интерактивность</span> / 
+            first: `<span id ='intro'>Часть 6 / Твой ход</span>`,
+            second: `<span class='circle'>непредсказуемость</span> / музыкальные игры / хакинг / камни / шары / звуковые карты / <br>
+            спортивные игры / синтезаторы / случайность / <span class='circle'>инструкции</span> / игрушки / монетка / память / <br>
+            изысканный труп / <span class='circle'>партитуры</span> / circuit bending / колода карт / слова / <span class='circle'>сломанный телефон</span> / <br>
+            правила / <span class='circle'>музыкальный автомат</span> / звуковые игры / квесты / <span class='circle'>выбор</span> / <span class='circle'>интерактивность</span> / <br>
             шахматы / игральные кости / лего / <span class='circle'>тв-игра</span> / звуковая поэзия / куклы / звуковые прогулки`,
             third: `<div class="circle">
-            <span class='bold'>Pauline Oliveros. For Annea Lockwood and Alison Knowles.</span> 1975<br>
+            <span class='bold'>Pauline Oliveros. For Annea Lockwood and<br>
+             Alison Knowles. 1975</span><br><br>
                 Keep the next sound you hear in mind<br>
                 for at least the next halfhour.
             </div>
             `,
             fourth: `<div class="circle">
-            <span class='bold'>Полина Оливерос. Для Анни Локвуд и Элисон Ноулз.</span> 1975<br>
-                Запомните следующий звук, который вы услышите,<br>
-                по крайней мере, на ближайшие полчаса.
+            <span class='bold'>Полина Оливерос. Для Анни Локвуд и<br>
+             Элисон Ноулз. 1975</span><br><br>
+                Запомните следующий звук, который вы <br>услышите,
+                хотя бы на ближайшие полчаса.
             </div>`
         },
         {
-            first: `Часть 7 / Игры слов`,
-            second: `непредсказуемость / музыкальные игры / хакинг / камни / шары / звуковые карты / 
-            спортивные игры / синтезаторы / случайность / <span class='circle'>инструкции</span> / игрушки / монетка / память / 
-            изысканный труп / <span class='circle'>партитуры</span> / circuit bending / колода карт / <span class='circle'>слова</span> / сломанный телефон / 
-            правила / музыкальный автомат / звуковые игры / квесты / выбор / интерактивность / 
+            first: `<span id ='intro'>Часть 7 / Игры слов</span>`,
+            second: `непредсказуемость / музыкальные игры / хакинг / камни / шары / звуковые карты / <br>
+            спортивные игры / синтезаторы / случайность / <span class='circle'>инструкции</span> / игрушки / монетка / память / <br>
+            изысканный труп / <span class='circle'>партитуры</span> / circuit bending / колода карт / <span class='circle'>слова</span> / сломанный телефон / <br>
+            правила / музыкальный автомат / звуковые игры / квесты / выбор / интерактивность / <br>
             шахматы / игральные кости / лего / тв-игра / <span class='circle'>звуковая поэзия</span> / куклы / звуковые прогулки`
         },
         {
-            first: `Часть 8 / Игры в композиторов`,
-            second: `<span class='circle'>непредсказуемость</span> / <span class='circle'>музыкальные игры</span> / хакинг / камни / шары / звуковые карты / 
-            спортивные игры / синтезаторы / <span class='circle'>случайность</span> / инструкции / игрушки / <span class='circle'>монетка</span> / память / 
-            <span class='circle'>изысканный труп</span> / партитуры / circuit bending / <span class='circle'>колода карт</span> / слова / сломанный телефон / 
-            правила / музыкальный автомат / звуковые игры / квесты / <span class='circle'>выбор</span> / интерактивность / 
+            first: `<span id ='intro'>Часть 8 / Игры в композиторов</span>`,
+            second: `<span class='circle'>непредсказуемость</span> / <span class='circle'>музыкальные игры</span> / хакинг / камни / шары / звуковые карты / <br>
+            спортивные игры / синтезаторы / <span class='circle'>случайность</span> / инструкции / игрушки / <span class='circle'>монетка</span> / память / <br>
+            <span class='circle'>изысканный труп</span> / партитуры / circuit bending / <span class='circle'>колода карт</span> / слова / сломанный телефон / <br>
+            правила / музыкальный автомат / звуковые игры / квесты / <span class='circle'>выбор</span> / интерактивность / <br>
             шахматы / <span class='circle'>игральные кости</span> / лего / тв-игра / звуковая поэзия / куклы / звуковые прогулки`,
             third: `<div class="circle">
-            <span class='bold'>Brian Eno, Peter Schmidt. Oblique Strategies</span><br>
+            <span class='bold'>Brian Eno, Peter Schmidt. Oblique Strategies</span><br><br>
                 In total darkness, or in a very large room,<br> 
                 very quietly
             </div> 
             <br><br>
             <div class="circle">
-            <span class='bold'>Brian Eno, Peter Schmidt. Oblique Strategies</span><br>
+            <span class='bold'>Brian Eno, Peter Schmidt. Oblique Strategies</span><br><br>
                 Be less critical more often
             </div>`,
             fourth: `<div class="circle">
-            <span class='bold'>Брайан Ино, Питер Шмидт. Oblique Strategies</span><br>
-                В полной темноте или в очень большой комнате,<br> 
+            <span class='bold'>Брайан Ино, Питер Шмидт. Oblique Strategies</span><br><br>
+                В полной темноте или в очень большой комнате, 
                 очень тихо
             </div><br><br>
             <div class="circle">
-            <span class='bold'>Брайан Ино, Питер Шмидт. Oblique Strategies</span><br>
+            <span class='bold'>Брайан Ино, Питер Шмидт. Oblique Strategies</span><br><br>
                 Будьте менее критичны почаще
             </div>`
         },
         {
-            first: `Часть 9 / Видеоигры без видео`,
-            second: `непредсказуемость / музыкальные игры / хакинг / камни / шары / звуковые карты / 
-            спортивные игры / <span class='circle'>синтезаторы</span> / случайность / <span class='circle'>инструкции</span> / игрушки / монетка / <span class='circle'>память</span> / 
-            изысканный труп / партитуры / circuit bending / колода карт / слова / сломанный телефон / 
-            <span class='circle'>правила</span> / музыкальный автомат / <span class='circle'>звуковые игры</span> / квесты / <span class='circle'>выбор</span> / <span class='circle'>интерактивность</span> / 
+            first: `<span id ='intro'>Часть 9 / Видеоигры без видео</span>`,
+            second: `непредсказуемость / музыкальные игры / хакинг / камни / шары / звуковые карты / <br>
+            спортивные игры / <span class='circle'>синтезаторы</span> / случайность / <span class='circle'>инструкции</span> / игрушки / монетка / <span class='circle'>память</span> / <br>
+            изысканный труп / партитуры / circuit bending / колода карт / слова / сломанный телефон / <br>
+            <span class='circle'>правила</span> / музыкальный автомат / <span class='circle'>звуковые игры</span> / квесты / <span class='circle'>выбор</span> / <span class='circle'>интерактивность</span> / <br>
             шахматы / игральные кости / лего / тв-игра / звуковая поэзия / куклы / звуковые прогулки`
         },
         {
-            first: `Часть 10 / Для начала правила`,
-            second: `непредсказуемость / музыкальные игры / хакинг / камни / шары / <span class='circle'>звуковые карты</span> / 
-            спортивные игры / синтезаторы / случайность / <span class='circle'>инструкции</span> / игрушки / монетка / память / 
-            изысканный труп / <span class='circle'>партитуры</span> / circuit bending / колода карт / слова / сломанный телефон / 
-            <span class='circle'>правила</span> / музыкальный автомат / звуковые игры / <span class='circle'>квесты</span> / выбор / интерактивность / 
+            first: `<span id ='intro'>Часть 10 / Для начала правила</span>`,
+            second: `непредсказуемость / музыкальные игры / хакинг / камни / шары / <span class='circle'>звуковые карты</span> / <br>
+            спортивные игры / синтезаторы / случайность / <span class='circle'>инструкции</span> / игрушки / монетка / память / <br>
+            изысканный труп / <span class='circle'>партитуры</span> / circuit bending / колода карт / слова / сломанный телефон / <br>
+            <span class='circle'>правила</span> / музыкальный автомат / звуковые игры / <span class='circle'>квесты</span> / выбор / интерактивность / <br>
             шахматы / игральные кости / лего / тв-игра / звуковая поэзия / куклы / <span class='circle'>звуковые прогулки</span>`,
             third: `<div class="circle">
-            <span class='bold'>Ken Friedman. Mandatory Happening. 1966</span><br>
+            <span class='bold'>Ken Friedman. Mandatory Happening. 1966</span><br><br>
             You will decide to read this score or 
             <br>not to read it. When you have made your decision, <br>
             the happening is over.
             </div>`,
             fourth: `<div class="circle">
-            <span class='bold'>Кен Фридман. Обязательный хэппенинг. 1966</span><br>
+            <span class='bold'>Кен Фридман. Обязательный хэппенинг. 1966</span><br><br>
             Вы сами решите, читать эту партитуру или <br>
             не читать. Когда вы примете решение, <br>
             хеппенинг закончится.
