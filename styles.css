@@ -33,7 +33,7 @@ body {
 }
 
 #intro {
-    font-size: 3em;
+    font-size: 55px;
     filter: blur(0.7px);
     -webkit-filter: blur(0.7px);
 }
