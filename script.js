@@ -19,24 +19,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const lastPart = {
         first: `<span id ='intro'>Часть 11 / Final</span>`,
         second: `<div class="circle"><span class='bold'>Hildegard Westerkamp. Soundwalking</span><br><br>
-        <br>
+        
         Try to move <br>
         Without making any sound. <br>
         Is it possible?<br>
-        <br>
+        
         Do you hear any<br>
         Intermittent or discrete sounds<br>
         Rustles<br>
         Bangs<br>
         Thuds<br>
-        <br>
+        
         What else do you hear?<br>
-        <br>
+        
         Lead your ears away from these sounds and listen<br>
         beyond-----into the distance.<br>
         What is the quietest sound?<br>
         What else do you hear?<br>
-        <br>
+        
         What else?<br>
         What else?<br>
         What else?<br>
@@ -45,24 +45,24 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         `,
         third: `<div class="circle"><span class='bold'>Хильдегард Вестеркамп. Звуковая прогулка</span><br><br>
-        <br>
+
         Попробуйте пошевелиться<br>
         Не издавая ни звука.<br>
         Возможно ли это?<br>
-        <br>
+        
         Слышите ли вы какие-либо<br>
         Прерывистые или отдельные звуки<br>
         Шорохи<br>
         Взрывы<br>
         Глухие удары<br>
-        <br>
+        
         Что еще вы слышите?<br>
-        <br>
+        
         Отвлекитесь от этих звуков и послушайте<br>
         то, что за пределами ----- на дистанции<br>
         Какой звук самый тихий?<br>
         Что еще вы слышите?<br>
-        <br>
+        
         Что еще? <br>
         Что еще? <br>
         Что еще? <br>
