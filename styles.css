@@ -1,18 +1,37 @@
+@font-face {
+    font-family: Suisse;
+    src: url("fonts/SuisseIntl-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: SuisseBold;
+    src: url("fonts/SuisseIntl-Bold.otf") format("opentype");
+}
+
+
 body {
     background-color: black;
     color: white;
-    font-family: Arial, sans-serif; /* Optional: Set a default font */
+    font-family: Suisse, sans-serif; /* Optional: Set a default font */
 }
 
 #intro, #content {
     text-align: center;
     margin: 50px;
     font-size: 1.5em;
-    line-height: 1.6; /* Increase line height for better readability */
+    line-height: 2; /* Increase line height for better readability */
+    filter: blur(0.5px);
+    -webkit-filter: blur(0.5px);
 }
 
 .bold {
-    font-weight: bold;
+    font-family: SuisseBold;
+}
+
+#intro {
+    font-size: 3em;
+    filter: blur(0.7px);
+    -webkit-filter: blur(0.7px);
 }
 
 .circle {
